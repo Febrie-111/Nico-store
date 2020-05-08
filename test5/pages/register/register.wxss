@@ -1,0 +1,31 @@
+/* pages/register/register.wxss */
+.title{
+  text-align: center;
+  font-size: 80rpx;
+  color: burlywood;
+}
+.Box{
+  padding: 100rpx 50rpx;
+  position: relative;
+}
+.userBox{
+  margin-bottom: 100rpx;
+}
+input{
+  border: 1rpx solid sandybrown;
+  padding: 30rpx;
+  border-radius: 20rpx;
+}
+.img{
+  position: absolute;
+  right: 50rpx;
+  bottom: 300rpx;
+  z-index: 100;
+}
+image{
+  width: 50rpx;
+  height: 50rpx;
+}
+button{
+  margin:50rpx;
+}

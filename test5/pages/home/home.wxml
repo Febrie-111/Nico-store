@@ -1,0 +1,132 @@
+<!--pages/home/home.wxml-->
+<!-- 顶部 -->
+<view class="title">
+	<view class="search">
+		<view class="round">
+			<image src="../../img/location.png" class="location" bindtap="getLocation"></image>
+		</view>
+		<text class="titleName">永辉超市</text>
+		<image src="../../img/搜索.png" class="searchImg"></image>
+		<view class="searchBox" bindtap="toSearch"><input type="text" value="{{search}}" placeholder="输入商品名称"></input></view>
+		<image src="../../img/扫描.png" class="scanImg"></image>
+	</view>
+</view>
+<!-- 导航 -->
+<view class="nav-list">
+	<text class="{{currentTab==0?'nav-active':''}}" data-current="0" bindtap="switchNav">推荐</text>
+	<text class="{{currentTab==1?'nav-active':''}}" data-current="1" bindtap="switchNav">大菜市</text>
+	<text class="{{currentTab==2?'nav-active':''}}" data-current="2" bindtap="switchNav">辉家菜谱</text>
+	<text class="{{currentTab==3?'nav-active':''}}" data-current="3" bindtap="switchNav">特价专区</text>
+</view>
+
+
+<!-- 推荐部分 -->
+
+<view class="common" wx:if="{{currentTab==0}}">
+	<!-- 广告图 -->
+	<view class="ac-img">
+		<swiper>
+			<swiper-item>
+				<image src="../../img/ac-img1.jpg"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 主体 -->
+	<view class="mycontainer">
+		<view class="p-box"></view>
+		<view class="class-title">小辉推荐</view>
+		<scroll-view scroll-x="true" class="myscroll">
+			<block wx:for="{{product}}" wx:key="id">
+				<view class="comm-product" >
+					<view>
+						<image class="comm-img" src="{{item.img2}}" bindtap="commTo"  data-id="{{item.id}}"></image>
+						<view class="comm-name">{{item.name}}</view>
+						<view class="comm-off">{{item.off}}</view>
+						<view class="comm-price">
+							<image src="../../img/钱.png"></image>{{item.price}}
+						</view>
+						<image src="../../img/add.png" class="add" bindtap="add" data-id="{{item.id}}"></image>
+					</view>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+</view>
+<!-- 大菜市部分 -->
+
+<view class="market" wx:if="{{currentTab==1}}">
+	<!-- 广告图 -->
+	<view>
+		<image src="../../img/market.jpg" class="ac-img"></image>
+	</view>
+	<view>
+		<view class="fru-title">新鲜水果</view>
+		<view class="fru-box">
+			<scroll-view scroll-x="true" class="myscroll">
+				<block wx:for="{{fruit}}" wx:key="id">
+					<view class="comm-product" bindtap="fruitTo"  data-id="{{item.id}}">
+						<view>
+							<image class="comm-img" src="{{item.img2}}"></image>
+							<view class="comm-name">{{item.name}}</view>
+							<view class="comm-off">{{item.off}}</view>
+							<view class="comm-price">
+								<image src="../../img/钱.png"></image>{{item.price}}
+							</view>
+						</view>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+</view>
+<!-- 菜谱部分 -->
+<view class="meet" wx:if="{{currentTab==2}}">
+	<!-- 广告图 -->
+	<view>
+		<image src="../../img/meet.jpg" class="ac-img"></image>
+	</view>
+	<view>
+		<view class="meet-title">健康好食材等您挑</view>
+		<view class="meet-box">
+			<scroll-view scroll-x="true" class="myscroll">
+				<block wx:for="{{meet}}" wx:key="id">
+					<view class="comm-product" bindtap="meetTo"  data-id="{{item.id}}">
+						<view>
+							<image class="comm-img" src="{{item.img2}}"></image>
+							<view class="comm-name">{{item.name}}</view>
+							<view class="comm-off">{{item.off}}</view>
+							<view class="comm-price">
+								<image src="../../img/钱.png"></image>{{item.price}}
+							</view>
+						</view>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+</view>
+<!-- 特价专区 -->
+<view class="specialOff" wx:if="{{currentTab==3}}">
+	<!-- 广告图 -->
+	<view>
+		<image src="../../img/special-off.jpg" class="ac-img"></image>
+	</view>
+	<view>
+		<view class="specialOff-box">
+			<scroll-view scroll-x="true" class="myscroll">
+				<block wx:for="{{specialOff}}" wx:key="id">
+					<view class="comm-product" bindtap="offTo"  data-id="{{item.id}}">
+						<view>
+							<image class="comm-img" src="{{item.img2}}"></image>
+							<view class="comm-name">{{item.name}}</view>
+							<view class="comm-off">{{item.off}}</view>
+							<view class="comm-price">
+								<image src="../../img/钱.png"></image>{{item.price}}
+							</view>
+						</view>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+</view>

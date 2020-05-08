@@ -1,0 +1,13 @@
+.title{
+  text-align: center;
+  font-size: 70rpx;
+  color: coral;
+}
+.box{
+  margin: 20rpx;
+  padding: 20rpx;
+}
+image{
+  width: 50rpx;
+  height: 50rpx;
+}

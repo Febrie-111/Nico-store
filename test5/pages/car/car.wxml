@@ -1,0 +1,9 @@
+<!--pages/car/car.wxml-->
+<view wx:if="{{!view}}"><button bindtap="toLogin">请登录</button></view>
+<view wx:if="{{view}}">
+		<block wx:for="{{product}}" wx:key="*this">
+    <image src="{{item.img1}}"></image>
+    <view>{{item.name}}</view>
+    <view>{{item.price}}</view>
+		</block>
+</view>

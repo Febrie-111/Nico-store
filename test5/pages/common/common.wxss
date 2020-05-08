@@ -1,0 +1,31 @@
+view{
+  margin: 20rpx;
+}
+image{
+  width: 100%;
+  height: 300rpx;
+}
+.comm-price {
+  color: #f47920;
+  font-weight: bold;
+}
+.comm-price image{
+  width: 25rpx;
+  height: 25rpx;
+}
+.info{
+  font-weight: bold;
+  text-align: center;
+}
+.info-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.flex1{
+  width: 30%;
+  text-align: center;
+}
+.flex2{
+  color: gray;
+  font-size: 25rpx;
+}

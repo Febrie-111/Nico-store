@@ -1,0 +1,12 @@
+<!--pages/register/register.wxml-->
+<view class="title"><text>注册页面</text></view>
+<view class="Box">
+	<form bindsubmit="login">
+		<view class="userBox"><input class="username" name="username" type="text" value="{{username}}" placeholder="请输入用户名" bindinput="getUserName"></input></view>
+		<view><input class="password" type="text"  name="password" password="{{showEye}}" placeholder="请输入密码" value="{{password}}" bindinput="getPassword"></input></view>
+		<view class="img" bindtap="eyeSwitch">
+			<image src="{{imgsrc}}"></image>
+		</view>
+     <view class="loginBtn"><button type="primary" disabled="{{show}}" form-type="submit" bindtap="loginSuccess">注册</button></view>
+	</form>
+</view>

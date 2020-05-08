@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+</head>
+<body>
+    <script>
+    let url = "https://api.weibo.com/oauth2/access_token?client_id=1098861300&client_secret=8cb3767f46799e81516cb232aa011259&grant_type=authorization_code&code=7f09ba7a97477dc2876e6882ff69898f&redirect_uri=https://www.baidu.com/index.html"
+    axios.post(url)
+    .then((result)=>{
+        console.log(result.data)
+    })
+    </script>
+</body>
+</html>

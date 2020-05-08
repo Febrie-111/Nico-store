@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<form bindsubmit="search">
+		<view class="userBox"><input name="name1" type="text" value="{{name1}}" placeholder="请输入商品名称"></input></view>
+    <button form-type="submit" bindtap="toSearch">搜索</button>
+</form>
+<view>
+<block wx:for="{{product}}" wx:key="id">
+					<view class="comm-product">
+						<view>
+							<view class="comm-name">{{item.name}}</view>
+							<view class="comm-price">
+								<image src="../../img/钱.png"></image>{{item.price}}
+							</view>
+						</view>
+					</view>
+				</block>
+</view> 

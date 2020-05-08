@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/register/register",
+    "pages/search/search",
+    "pages/common/common",
+    "pages/fruit/fruit",
+    "pages/meet/meet",
+    "pages/specialOff/specialOff",
+    "pages/car/car",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f47920",
+    "navigationBarTitleText": "永辉超市",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "./img/index.png",
+        "selectedIconPath": "./img/index-1.png"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "text": "购物车",
+        "iconPath": "./img/car.png",
+        "selectedIconPath": "./img/car-1.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "个人中心",
+        "iconPath": "./img/login-1.png",
+        "selectedIconPath": "./img/login.png"
+      }
+      
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+        "desc": "你的位置信息将用于商品的配送"
+    }
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

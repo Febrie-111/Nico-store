@@ -1,0 +1,10 @@
+<view class="title"><text>登录界面</text></view>
+<view wx:if="{{!view}}"><button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取授权</button></view>
+<view>
+	<view class="box" wx:if="{{view}}">
+		<view>欢迎您<image src="{{img}}"></image>
+			<text>{{name}}</text>
+			<view>请尽情享受您的购物之旅</view>
+		</view>
+	</view>
+</view>

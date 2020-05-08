@@ -1,0 +1,12 @@
+.userBox{
+  margin: 50rpx 20rpx;
+  padding: 20rpx;
+}
+.comm-price {
+  color: #f47920;
+  font-weight: bold;
+}
+.comm-price image{
+  width: 25rpx;
+  height: 25rpx;
+}
